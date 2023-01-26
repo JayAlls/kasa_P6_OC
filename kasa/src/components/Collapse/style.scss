@@ -1,0 +1,41 @@
+@import "../../styles/config.scss";
+
+.col-container {
+    max-width: 1023px;
+    margin: 30px auto;
+    border-radius: 5px;
+    height: auto;
+    .collapse {
+        background-color: $primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 17px;
+        border-radius: 5px;
+        font-size: 24px;
+        color:$secondary;
+        font-weight: 500;
+
+        h5 {
+            margin: 0;;
+            padding: 0;
+        }
+
+        .arrow-rotate {
+            transform: rotate(180deg);
+        }
+    }
+
+    p {
+        max-width: 978px;
+        margin: 0 auto;
+        color: $primary;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        transition: ease-in-out 0.4s;
+        background-color: #F6F6F6;
+        padding: 27px 18px 19px 18px;
+        border-radius: 5px;
+    }
+}
