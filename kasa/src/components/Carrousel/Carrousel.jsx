@@ -1,13 +1,57 @@
 import React from "react";
-import { useState} from "react";
+import { useState, useEffect} from "react";
+import "./style.scss";
 
-const Carrousel = ({images}) => {
+const Carrousel = ({objectId}) => {
+    const [images, setImages] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const newObjectId = objectId.replace(':', "")
+    // console.log(newObjectId);
+
+    useEffect(() => {
+        fetch(`./logement.json`)
+        .then(response => response.json())
+        .then(data => {
+            const findDataId = data.filter(item => item.id === newObjectId)
+            const findImages = findDataId[0].pictures
+            console.log(findImages);
+            setImages(findImages)
+            
+        })
+    }, [newObjectId]);
+
+    const handlePrevious = () => {
+        if (currentIndex === 0) {
+            setCurrentIndex(images.length - 1);
+        } else {
+            setCurrentIndex(currentIndex - 1);
+        }
+    }
+
+    const handleNext = () => {
+        if (currentIndex === images.length - 1) {
+            setCurrentIndex(0);
+        } else {
+            setCurrentIndex(currentIndex + 1);
+        }
+    }
+    
     return (
-        <div>
+        <div className="carrousel">
             <img src={images[currentIndex]} alt="Slide" />
-            <button onClick={() => setCurrentIndex(currentIndex - 1)}>Précédent</button>
-            <button onClick={() => setCurrentIndex(currentIndex + 1)}>Suivant</button>
+            
+            <button className="left" onClick={handlePrevious}>
+                <svg width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z" fill="white"/>
+                </svg>
+            </button>
+
+            <button className="right" onClick={handleNext}>
+                <svg width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z" fill="white"/>
+                </svg>
+            </button>
         </div>
     );
 }

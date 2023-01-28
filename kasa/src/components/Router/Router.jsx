@@ -8,7 +8,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/logement/:objectId" element={<Logement />} />
+        <Route path="/:id" element={<Logement />} />
       </Routes>
   );
 }

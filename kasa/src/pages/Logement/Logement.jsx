@@ -1,25 +1,17 @@
 import React from "react";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 
 const Logement = () => {
-    let { objectId } = useParams();
-    const [images, setImages] = useState([]);
-    useEffect(() => {
-        fetch(`/logement.json`)
-            .then(response => response.json())
-            .then(data => {
-                const currentObject = data.filter(object => object.id === objectId);
-                setImages(currentObject[0].images);
-            });
-    }, [objectId]);
+    let {id} = useParams();
+
+    // console.log(id)
     return (
         <div>
-            <Carrousel images={images} />
+            <Carrousel objectId={id} />
         </div>
-    );
+    )
 }
 
 export default Logement;
