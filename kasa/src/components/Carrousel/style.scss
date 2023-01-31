@@ -20,6 +20,9 @@
         top: 50%;
         background: transparent;
         border: none;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .right {
         right: 10px;

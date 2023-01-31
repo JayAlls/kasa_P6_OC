@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card({id, cover, title}) {
     
     return (
-        <Link to={`/:${id}`}>
+        <Link to={`/logement/${id}`}>
             <div key={id} className="cards">
                 <img src={cover} alt={title} />
                 <p>{title}</p>

@@ -1,25 +1,9 @@
 import React from "react";
-import { useState, useEffect} from "react";
+import { useState } from "react";
 import "./style.scss";
 
-const Carrousel = ({objectId}) => {
-    const [images, setImages] = useState([]);
+const Carrousel = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const newObjectId = objectId.replace(':', "")
-    // console.log(newObjectId);
-
-    useEffect(() => {
-        fetch(`./logement.json`)
-        .then(response => response.json())
-        .then(data => {
-            const findDataId = data.filter(item => item.id === newObjectId)
-            const findImages = findDataId[0].pictures
-            console.log(findImages);
-            setImages(findImages)
-            
-        })
-    }, [newObjectId]);
 
     const handlePrevious = () => {
         if (currentIndex === 0) {

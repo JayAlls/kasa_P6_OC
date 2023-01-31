@@ -27,7 +27,7 @@ const Collapse = ({title, description }) => {
                     </svg>
             </div>
             {isOpen && 
-                <p style={{ transition: 'all 0.4s ease-in-out', "margin-top": `${top}px`, opacity: opacity }}>
+                <p style={{ transition: 'all 0.4s ease-in-out', marginTop: `${top}px`, opacity: opacity }}>
                     {description}
                 </p>
             }
