@@ -1,3 +1,5 @@
+@import "../../styles/config.scss";
+
 .col-logement {
     display: flex;
     justify-content: space-between;
@@ -6,15 +8,31 @@
     height: 300px;
     margin: 0 100px;
     margin-bottom: 25px;
+    @include mobile-only {
+        width: 335px;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+    }
     
     .col-container {
         max-width: 582px;
         width: 100%;
         margin: 25px 0;
+        @include mobile-only {
+            margin: 10px 0;
+        }
         
         p {
             display: flex;
             flex-direction: column;
+        }
+
+        h5 {
+            @include mobile-only {
+                font-size: 13px;
+            }
         }
     }
 }

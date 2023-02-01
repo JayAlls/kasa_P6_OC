@@ -18,6 +18,9 @@ header {
         img {
             height: 100%;
             width: 100%;
+            @include mobile-only {
+                margin-left: 20px;
+            }
         }
 
     }

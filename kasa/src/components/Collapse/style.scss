@@ -5,6 +5,9 @@
     margin: 30px auto;
     border-radius: 5px;
     height: auto;
+    @include mobile-only {
+        margin: 30px 20px;
+    }
     .collapse {
         background-color: $primary;
         display: flex;

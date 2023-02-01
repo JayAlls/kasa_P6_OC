@@ -1,21 +1,29 @@
 @import "../../styles/config.scss";
 
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $cardContainerColor;
-    max-width: 1240px;
-    height: auto;
-    margin: 40px 100px;
-    border-radius: 25px;
-    flex-wrap: wrap;
-    @include mobile-only {
-        position: relative;
-        max-width: 100%;
-        margin: 0 20px;
-        justify-content: center;
-        background-color: transparent;
+main {
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $cardContainerColor;
+        max-width: 1240px;
+        height: auto;
+        margin: 40px 100px;
+        border-radius: 25px;
+        flex-wrap: wrap;
+        @include mobile-only {
+            position: relative;
+            max-width: 100%;
+            margin: 0 20px;
+            justify-content: center;
+            background-color: transparent;
+        }
+        
     }
-    
+
+    .banner {
+        @include mobile-only {
+            height: 110px;
+        }
+    }
 }

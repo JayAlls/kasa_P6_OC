@@ -11,11 +11,19 @@
         margin-top: 100px;
         font-size: 288px;
         font-weight: 700;
+        @include mobile-only {
+            font-size: 96px;
+        }
     }
 
     h3 {
         font-size: 36px;
         font-weight: 500;
+        @include mobile-only {
+            font-size: 18px;
+            text-align: center;
+            width: 260px;
+        }
     }
 
     a {
@@ -23,5 +31,8 @@
         margin-top: 180px;
         margin-bottom: 160px;
         color: $primary;
+        @include mobile-only {
+            font-size: 14px;
+        }
     }
 }
