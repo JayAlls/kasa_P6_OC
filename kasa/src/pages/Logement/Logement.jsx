@@ -30,11 +30,13 @@ const Logement = () => {
         <div>
             <Carrousel images={images} />
             <Info currentLogement={currentLogement} />
-            <Collapse title={"Description"} description={currentLogement?.description}/>
-            <Collapse title={"Équipements"} description={
-                currentLogement?.equipments.map((equipment, index) => {
-                    return <span key={index}>{equipment}</span>
-            })}/>
+            <div className="col-logement">
+                <Collapse title={"Description"} description={currentLogement?.description}/>
+                <Collapse title={"Équipements"} description={
+                    currentLogement?.equipments.map((equipment, index) => {
+                        return <span key={index}>{equipment}</span>
+                })}/>
+            </div>
         </div>
     )
 }

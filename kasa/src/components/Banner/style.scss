@@ -1,3 +1,5 @@
+@import "../../styles/config.scss";
+
 .banner {
     position: relative;
     max-width: 100%;
@@ -9,11 +11,27 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    @include mobile-only {
+        width: 335px;
+        height: 110px;
+        margin: 20px auto;
+        margin-bottom: 0;
+        justify-content: left;
+        align-items: flex-end;
+        border-radius: 10px;
+    }
     
     p {
         position: absolute;
         font-size: 48px;
         color: #FFFFFF;
+        @include mobile-only {
+            font-size: 24px;
+            width: 200px;
+            height: 48px;
+            text-align: left;
+            margin: 32px 15px;
+        }
     }
 
     img {

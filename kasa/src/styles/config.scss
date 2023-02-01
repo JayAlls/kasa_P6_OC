@@ -8,3 +8,15 @@ $cardContainerColor: #F6F6F6;
 // Variables Font 
 
 $montserrat: "Montserrat", sans-serif;
+
+// media-queries
+
+$breakpoints: (
+     mobile: 699px
+);
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}

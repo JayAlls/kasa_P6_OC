@@ -1,12 +1,18 @@
+@import "../../styles/config.scss";
+
 .carrousel {
     position: relative;
     max-width: 1240px;
+    min-width: 335px;
     height: 415px;
-    margin: 20px auto;
+    margin: 20px 100px;
     overflow: hidden;
     border-radius: 25px;
-
     display: flex;
+    @include mobile-only {
+        margin: 20px;
+        height: 255px;
+    }
 
     img {
         object-fit: cover;

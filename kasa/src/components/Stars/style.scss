@@ -1,12 +1,24 @@
+@import "../../styles/config.scss";
+
 .stars {
     width: 196px;
     height: 36px;
     margin: 0;
     padding: 0;
+    @include mobile-only {
+        left: 0;
+        width: 100px;
+        height: 18px;
+    }
     img {
         width: 30px;
         height: 30px;
         margin-right: 8px;
+        @include mobile-only {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
     }
 }
         
