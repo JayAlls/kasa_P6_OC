@@ -10,8 +10,10 @@
     border-radius: 25px;
     display: flex;
     @include mobile-only {
-        margin: 20px;
         height: 255px;
+    }
+    @include tablette-only {
+        margin: 20px;
     }
 
     img {

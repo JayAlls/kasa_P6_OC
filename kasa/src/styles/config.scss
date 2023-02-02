@@ -12,11 +12,17 @@ $montserrat: "Montserrat", sans-serif;
 // media-queries
 
 $breakpoints: (
-     mobile: 699px
+     mobile: 699px,
+     tablette: 1000px
 );
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+@mixin tablette-only {
+    @media screen and (max-width: map-get($breakpoints, tablette)) {
         @content;
     }
 }

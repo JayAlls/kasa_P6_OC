@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./style.scss";
 import Card from "../../components/Card/Card";
 import Banner from "../../components/Banner/Banner";
-import banner from  "../../assets/banner.svg"
+import banner from  "../../assets/banner.svg";
 import "../../components/Banner/style.scss";
 
 

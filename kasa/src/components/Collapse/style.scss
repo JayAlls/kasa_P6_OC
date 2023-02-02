@@ -1,13 +1,15 @@
 @import "../../styles/config.scss";
 
 .col-container {
-    max-width: 1023px;
-    margin: 30px auto;
+    max-width: 100%;
+    margin: 30px 100px;
     border-radius: 5px;
     height: auto;
     @include mobile-only {
         margin: 30px 20px;
     }
+    
+
     .collapse {
         background-color: $primary;
         display: flex;

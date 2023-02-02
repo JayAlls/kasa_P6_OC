@@ -15,14 +15,15 @@
         justify-content: flex-start;
         margin-bottom: 50px;
     }
-    
+
     .col-container {
         max-width: 582px;
         width: 100%;
-        margin: 25px 0;
+        margin: 25px 5px;
         @include mobile-only {
             margin: 10px 0;
         }
+        
         
         p {
             display: flex;

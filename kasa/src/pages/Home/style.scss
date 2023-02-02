@@ -18,12 +18,19 @@ main {
             justify-content: center;
             background-color: transparent;
         }
+
+        @include tablette-only {
+            max-width: 100%;
+            margin: 40px 20px;
+        }
         
     }
 
     .banner {
         @include mobile-only {
+            max-width: 100%;
             height: 110px;
+            margin: 0 20px;
         }
     }
 }
