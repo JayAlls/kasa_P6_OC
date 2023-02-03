@@ -13,14 +13,24 @@ const Logement = () => {
 
     const {id} = useParams();
 
+    const redirectError = () => {
+        window.location.replace("/error");
+    }
+
     useEffect(() => {
         fetch("/logement.json")
         .then(response => response.json())
         .then(data => {
             const findDataId = data.find(item => item.id === id)
-            // console.log(findDataId)
-            setCurrentLogement(findDataId)
-            // console.log(currentLogement)
+
+            if (!findDataId) {
+                return redirectError();
+            } else {
+                // console.log(findDataId)
+                setCurrentLogement(findDataId)
+                // console.log(currentLogement)
+
+            }
         })
     }, [id]);
 
