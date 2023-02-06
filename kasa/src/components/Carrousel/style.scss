@@ -16,6 +16,14 @@
         margin: 20px;
     }
 
+    .counter {
+        position: absolute;
+        font-size: 12px;
+        color: $secondary;
+        bottom: 10px;
+        left: 50%;
+    }
+
     img {
         object-fit: cover;
         width: 100%;
@@ -26,6 +34,7 @@
         position: absolute;
         z-index: 1;
         top: 50%;
+        transform: translateY(-50%);
         background: transparent;
         border: none;
         opacity: 0.5;
